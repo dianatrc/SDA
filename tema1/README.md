@@ -1,17 +1,17 @@
 # README - Tema 1 SDA
 
 ## Structuri de date
-`TPage` - reprezinta o pagina web, are trei campuri: id, url si descriere.
-`TNode, TStack` - reprezinta stive pentru navigarea inapoi (backward) si inainte (forward) intr-un tab (Tstack este acelasi lucru cu TNode*, reprezentand varful stivei).
-`TTab` - reprezinta un tab dintr-un browser, are 4 campuri: id, pagina curenta si doua stive pentru navigare: backward si forward.
-`TCell, TTabsList` - reprezinta o lista dublu inlantuita circulara cu santinela, folosita pentru a gestiona toate tab-urile deschide intr-un browser.
-`TBrowser` - structura principala ce reprezinta browser-ul.
+- `TPage` - reprezinta o pagina web, are trei campuri: id, url si descriere.
+- `TNode, TStack` - reprezinta stive pentru navigarea inapoi (backward) si inainte (forward) intr-un tab (Tstack este acelasi lucru cu TNode*, reprezentand varful stivei).
+- `TTab` - reprezinta un tab dintr-un browser, are 4 campuri: id, pagina curenta si doua stive pentru navigare: backward si forward.
+- `TCell, TTabsList` - reprezinta o lista dublu inlantuita circulara cu santinela, folosita pentru a gestiona toate tab-urile deschide intr-un browser.
+- `TBrowser` - structura principala ce reprezinta browser-ul.
 
 ## Declarari si alocari
-- `alocare_browser`: aloca un browser cu o lista de tab-uri si un tab curent, pagina implicita va fi setata ca fiind pagina curenta a tab-ului.
-- `alocare_stiva`: creeaza o stiva goala pentru istoricul paginilor.
-- `alocare_page`: aloca si initializeaza o pagina, o sa fie folosita pentru a crea vectorul de paginii.
-- `alocare_lista`: aloca o lista dublu inlantuita circulara cu santinela.
+- `alocare_browser()`: aloca un browser cu o lista de tab-uri si un tab curent, pagina implicita va fi setata ca fiind pagina curenta a tab-ului.
+- `alocare_stiva()`: creeaza o stiva goala pentru istoricul paginilor.
+- `alocare_page()`: aloca si initializeaza o pagina, o sa fie folosita pentru a crea vectorul de paginii.
+- `alocare_lista()`: aloca o lista dublu inlantuita circulara cu santinela.
 
 ## `NEW_TAB`
 Functia `NEW_TAB` creeaza un tab nou in browser si il adauga la lista de tab-uri, setandu-l ca tab-ul curent. Daca variabila x este 0, ID-ul noului tab va fi calculat prin incrementarea ID-ului ultimului tab. Daca x este diferit de 0, ID-ul noului tab va fi setat cu ajutorul lui x. Dupa aceea, x este resetat la 0. Pagina implicita va fi setata ca pagina curenta a tab-ului nou, iar stivele pentru istoric vor fi initializate pentru acest tab.
@@ -54,5 +54,5 @@ Funcția `PRINT_HISTORY` afișează istoricul paginilor vizitate pentru un anumi
 Pagina implicita va fi eliberata in int main() la final.
 
 ## Functii auxiliare
-- inversare(): inverseaza ordinea elementeor dintr-o stiva - stiva rasturnata se va afla in stiva auxiliara, care este transmisa prin parametru.
-- pop(): returneaza ultimul element adaugat intr-o stiva si il elimina, eliberand memoria.
+- `inversare()`: inverseaza ordinea elementeor dintr-o stiva - stiva rasturnata se va afla in stiva auxiliara, care este transmisa prin parametru.
+- `pop()`: returneaza ultimul element adaugat intr-o stiva si il elimina, eliberand memoria.
